@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore;
 
-var builder = WebHost.CreateDefaultBuilder()
+WebHost.CreateDefaultBuilder()
     .ConfigureAppConfiguration((context, builder) =>
     {
         var appPath = context.Configuration["IIS:FullApplicationPath"];
@@ -15,6 +15,5 @@ var builder = WebHost.CreateDefaultBuilder()
     {
         builder.UseSetting("IIS:FullApplicationPath", iis.FullApplicationPath);
     })
-    .Build();
-
-builder.Run();
+    .Build()
+    .Run();
