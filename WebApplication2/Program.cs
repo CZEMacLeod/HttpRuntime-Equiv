@@ -15,7 +15,6 @@ internal class Program
             .ConfigureWebHost(builder =>
             {
                 builder
-                    .UseKestrel()
                     .UseStartup<Startup>()
                     .UseIIS(iis =>
                     {
